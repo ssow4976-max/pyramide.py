@@ -1,0 +1,229 @@
+c:\Users\pc\Pictures\6.jpeg<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnect Summit 2026 - Contact</title>
+    <meta name="description" content="Page contact et inscription du AfriConnect Summit 2026, formulaire avec validation et FAQ CSS pure." />
+    <style>
+        :root{--bg:#f8fbff;--fg:#0f172a;--muted:#475569;--accent:#0054b3;--accent-600:#003f8a;--surface:#ffffff;--border:#d2e2f0;--radius:20px;}
+        [data-theme="dark"]{--bg:#070b18;--fg:#e2e8f0;--muted:#94a3b8;--accent:#60a5ff;--accent-600:#3b82f6;--surface:#10203b;--border:rgba(148,163,184,.25);}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;padding:0 1rem;}
+        .page{max-width:1160px;margin:0 auto;padding:1.5rem 0}
+        header{display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--border);backdrop-filter:blur(12px);padding:.9rem 0;z-index:10}
+        .brand{display:flex;align-items:center;gap:.75rem}
+        .logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-600));display:grid;place-items:center;color:white;font-weight:800}
+        nav{display:flex;flex-wrap:wrap;gap:.6rem;}
+        a{color:var(--fg);text-decoration:none}
+        .nav-link{padding:.55rem .85rem;border-radius:12px;font-weight:600;color:var(--muted)}
+        .nav-link:hover, .nav-link[aria-current="page"]{background:rgba(0,86,179,.12);color:var(--accent)}
+        .theme-toggle{border:1px solid var(--border);background:transparent;border-radius:12px;padding:.55rem;cursor:pointer;color:var(--fg)}
+        .hero{padding:2rem 0 1rem}
+        .breadcrumbs{font-size:.9rem;color:var(--muted);margin-bottom:.75rem}
+        h1{font-size:clamp(2rem,4vw,3rem);margin:.2rem 0}
+        .hero p{max-width:54rem;color:var(--muted);line-height:1.7}
+        .content{display:grid;grid-template-columns:1.5fr 1fr;gap:2rem;align-items:start;margin-top:2rem}
+        .card{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:1.6rem;box-shadow:0 20px 50px rgba(15,23,42,.08)}
+        label{display:block;margin-bottom:.5rem;font-weight:600}
+        input,select,textarea{width:100%;padding:.9rem 1rem;border:1px solid var(--border);border-radius:14px;background:transparent;color:var(--fg);font:inherit;outline:none}
+        input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,86,179,.1)}
+        .field{margin-bottom:1rem}
+        .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+        .row.one{grid-template-columns:1fr}
+        button{background:var(--accent);color:white;padding:.95rem 1.1rem;border:none;border-radius:16px;font-weight:700;cursor:pointer}
+        .help{font-size:.92rem;color:#d12b2b;margin-top:.35rem;display:none}
+        .help.visible{display:block}
+        .success{margin-top:1rem;padding:1rem 1.25rem;border-radius:16px;background:rgba(4,145,255,.1);color:#054b86;display:none}
+        .faq{margin-top:2rem}
+        .faq-item{border:1px solid var(--border);border-radius:18px;overflow:hidden;margin-bottom:.75rem}
+        .faq-item input{position:absolute;opacity:0;pointer-events:none}
+        .faq-item label{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;cursor:pointer;font-weight:700;background:var(--surface)}
+        .faq-item label::after{content:'+';font-size:1.1rem;color:var(--accent)}
+        .faq-item input:checked + label::after{content:'−'}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+        .faq-item input:checked ~ .faq-answer{max-height:200px;padding:0 1.25rem 1rem}
+        .faq-answer p{margin:0;color:var(--muted);line-height:1.8}
+        .map{border-radius:24px;overflow:hidden;margin-top:1.25rem;height:300px}
+        .info{font-size:.95rem;color:var(--muted);line-height:1.75}
+        @media(max-width:940px){.content{grid-template-columns:1fr}}
+        .footer-note{margin-top:2rem;text-align:center;color:var(--muted);font-size:.95rem}
+    </style>
+</head>
+<body>
+    <div class="page" role="document">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden="true">AC</div>
+                <div>
+                    <div style="font-weight:800">AfriConnect Summit</div>
+                    <div style="font-size:.85rem;color:var(--muted)">Contact</div>
+                </div>
+            </div>
+            <nav aria-label="Navigation principale">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="programme.html">Programme</a>
+                <a class="nav-link" href="intervenants.html">Intervenants</a>
+                <a class="nav-link" href="page6.html">Ressources</a>
+                <a class="nav-link" href="resume.html">Résumé</a>
+                <a class="nav-link" href="contact.html" aria-current="page">Contact</a>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Basculer thème">🌓</button>
+        </header>
+
+        <section class="hero">
+            <div class="breadcrumbs">Accueil › Contact</div>
+            <h1>Contact & inscription</h1>
+            <p>Envoyez votre candidature fictive pour participer à AfriConnect Summit 2026. Le formulaire vérifie les données avant l'envoi.</p>
+        </section>
+
+        <div class="content">
+            <div class="card">
+                <form id="contactForm" novalidate>
+                    <div class="row">
+                        <div class="field">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required minlength="3" placeholder="Votre nom complet">
+                            <div class="help" id="nameHelp">Ce champ est requis.</div>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                            <div class="help" id="emailHelp">Entrez un email valide.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" required pattern="[0-9+\s-]{8,}" placeholder="+221 77 123 45 67">
+                            <div class="help" id="phoneHelp">Minimum 8 chiffres.</div>
+                        </div>
+                        <div class="field">
+                            <label for="participation">Type de participation</label>
+                            <select id="participation" name="participation" required>
+                                <option value="">Sélectionner</option>
+                                <option>Participant</option>
+                                <option>Intervenant</option>
+                                <option>Partenaire</option>
+                            </select>
+                            <div class="help" id="participationHelp">Choisissez une option.</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="country">Pays africain</label>
+                        <select id="country" name="country" required>
+                            <option value="">Sélectionner un pays</option>
+                            <option>Sénégal</option>
+                            <option>Côte d'Ivoire</option>
+                            <option>Maroc</option>
+                            <option>Kenya</option>
+                            <option>Afrique du Sud</option>
+                            <option>Nigeria</option>
+                            <option>Ghana</option>
+                            <option>Algérie</option>
+                            <option>Égypte</option>
+                            <option>Tunisie</option>
+                        </select>
+                        <div class="help" id="countryHelp">Veuillez choisir un pays.</div>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message / motivation</label>
+                        <textarea id="message" name="message" rows="5" required minlength="20" placeholder="Expliquez pourquoi vous souhaitez participer..."></textarea>
+                        <div class="help" id="messageHelp">Minimum 20 caractères.</div>
+                    </div>
+                    <button type="submit">Envoyer ma demande</button>
+                    <div class="success" id="successMessage">Merci ! Votre demande a été envoyée avec succès.</div>
+                </form>
+            </div>
+
+            <div>
+                <div class="card" style="margin-bottom:1.5rem;">
+                    <h2 style="margin-top:0">Infos pratiques</h2>
+                    <p class="info">Lieu fictif : Centre des Congrès d'Abidjan, Côte d'Ivoire. Cet événement est pensé pour les communautés tech francophones.</p>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.4070925356395!2d-4.0315183!3d5.322377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfcdf7b1bea38d4d%3A0x79e14551884d067d!2sPalais%20des%20Congr%C3%A8s%20d'Abidjan!5e0!3m2!1sfr!2scd!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="card faq">
+                    <h2 style="margin-top:0">FAQ</h2>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq1">
+                        <label for="faq1">Comment rejoindre le summit ?</label>
+                        <div class="faq-answer"><p>Remplissez le formulaire, choisissez votre type de participation et vous recevrez un email de confirmation fictif.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq2">
+                        <label for="faq2">Puis-je soumettre une conférence ?</label>
+                        <div class="faq-answer"><p>Oui, sélectionnez « Intervenant » et décrivez votre sujet dans le message.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq3">
+                        <label for="faq3">Besoin d'aide pour l'inscription ?</label>
+                        <div class="faq-answer"><p>Contactez-nous via le formulaire, en indiquant vos informations et vos questions.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq4">
+                        <label for="faq4">Est-ce un site réel ?</label>
+                        <div class="faq-answer"><p>Il s'agit d'un site fictif conçu pour l'examen, mais la page reste entièrement fonctionnelle.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">Ce formulaire utilise une validation JavaScript simple et un accordéon CSS pur pour la FAQ.</div>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('africonnect-theme');
+        if(savedTheme === 'dark') root.setAttribute('data-theme','dark');
+        themeToggle.addEventListener('click', () => {
+            const dark = root.getAttribute('data-theme') === 'dark';
+            if(dark){
+                root.removeAttribute('data-theme');
+                localStorage.removeItem('africonnect-theme');
+            } else {
+                root.setAttribute('data-theme','dark');
+                localStorage.setItem('africonnect-theme','dark');
+            }
+        });
+
+        const form = document.getElementById('contactForm');
+        const nameField = document.getElementById('name');
+        const emailField = document.getElementById('email');
+        const phoneField = document.getElementById('phone');
+        const participationField = document.getElementById('participation');
+        const countryField = document.getElementById('country');
+        const messageField = document.getElementById('message');
+        const successMessage = document.getElementById('successMessage');
+
+        const showError = (input, helpId) => {
+            const help = document.getElementById(helpId);
+            help.classList.add('visible');
+            input.setAttribute('aria-invalid','true');
+        };
+        const hideError = (input, helpId) => {
+            const help = document.getElementById(helpId);
+            help.classList.remove('visible');
+            input.removeAttribute('aria-invalid');
+        };
+
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+            let valid = true;
+            if(nameField.value.trim().length < 3){ valid = false; showError(nameField,'nameHelp'); } else { hideError(nameField,'nameHelp'); }
+            if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)){ valid = false; showError(emailField,'emailHelp'); } else { hideError(emailField,'emailHelp'); }
+            if(!/^\+?[0-9\s-]{8,}$/.test(phoneField.value.trim())){ valid = false; showError(phoneField,'phoneHelp'); } else { hideError(phoneField,'phoneHelp'); }
+            if(!participationField.value){ valid = false; showError(participationField,'participationHelp'); } else { hideError(participationField,'participationHelp'); }
+            if(!countryField.value){ valid = false; showError(countryField,'countryHelp'); } else { hideError(countryField,'countryHelp'); }
+            if(messageField.value.trim().length < 20){ valid = false; showError(messageField,'messageHelp'); } else { hideError(messageField,'messageHelp'); }
+            if(valid){
+                successMessage.style.display = 'block';
+                form.reset();
+                setTimeout(()=>{ successMessage.style.display = 'none'; }, 4500);
+            }
+        });
+    </script>
+</body>
+</html>

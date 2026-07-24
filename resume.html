@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnect Summit 2026 - Résumé</title>
+    <meta name="description" content="Résumé du projet AfriConnect Summit 2026 par Samba Sow, avec le dépôt GitHub et les principales fonctionnalités implémentées." />
+    <style>
+        :root{--bg:#f8fbff;--fg:#101827;--muted:#5f6f8b;--accent:#0066cc;--accent-600:#004a9d;--surface:#ffffff;--border:#d9e4f2;--radius:20px;}
+        [data-theme="dark"]{--bg:#071018;--fg:#e6eef6;--muted:#94a3b8;--accent:#60a5ff;--accent-600:#3b82f6;--surface:#0f172a;--border:rgba(148,163,184,.25);}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;padding:0 1rem;transition:background .25s,color .25s;}
+        .page{max-width:1140px;margin:0 auto;padding:1.5rem 0}
+        header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--border);backdrop-filter:blur(14px);z-index:10}
+        .brand{display:flex;align-items:center;gap:.75rem}
+        .logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-600));display:grid;place-items:center;color:white;font-weight:800}
+        nav{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+        a{color:var(--fg);text-decoration:none}
+        .nav-link{padding:.55rem .85rem;border-radius:12px;font-weight:600;color:var(--muted)}
+        .nav-link:hover,.nav-link[aria-current="page"]{background:rgba(0,102,204,.12);color:var(--accent)}
+        .theme-toggle{border:1px solid var(--border);background:transparent;border-radius:12px;padding:.55rem;cursor:pointer;color:var(--fg)}
+        .hero{padding:2.5rem 0 1.25rem;display:grid;gap:1rem}
+        .breadcrumbs{font-size:.9rem;color:var(--muted);margin-bottom:.75rem}
+        h1{font-size:clamp(2rem,4vw,3rem);margin:.2rem 0}
+        p.lead{max-width:54rem;color:var(--muted);line-height:1.7}
+        .summary{display:grid;grid-template-columns:minmax(0,2fr) minmax(240px,1fr);gap:1.5rem;margin-top:2rem}
+        .card{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:1.5rem;box-shadow:0 24px 60px rgba(15,23,42,.06)}
+        .card h2{margin-top:0;color:var(--accent)}
+        .meta{display:grid;gap:.75rem;margin:1rem 0}
+        .meta-item{display:flex;justify-content:space-between;gap:.75rem;padding:.95rem 1rem;border:1px solid var(--border);border-radius:18px;background:rgba(0,102,204,.05)}
+        .meta-item strong{color:var(--accent)}
+        .features{margin-top:1rem}
+        .features li{margin-bottom:.85rem;line-height:1.7}
+        .repo-link{color:var(--accent);font-weight:700}
+        .footer{margin-top:2rem;padding:1.5rem 0;color:var(--muted);font-size:.92rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+        @media(max-width:860px){.summary{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <div class="page" role="document">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden="true">AC</div>
+                <div>
+                    <div style="font-weight:800">AfriConnect Summit</div>
+                    <div style="font-size:.85rem;color:var(--muted)">Résumé</div>
+                </div>
+            </div>
+            <nav aria-label="Navigation principale">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="programme.html">Programme</a>
+                <a class="nav-link" href="intervenants.html">Intervenants</a>
+                <a class="nav-link" href="page6.html">Ressources</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="resume.html" aria-current="page">Résumé</a>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Basculer thème">🌓</button>
+        </header>
+
+        <section class="hero">
+            <div class="breadcrumbs">Accueil › Résumé</div>
+            <h1>Résumé du projet AfriConnect Summit 2026</h1>
+            <p class="lead">Page de présentation du projet créée pour l’examen, avec le nom de l’auteur et le lien du dépôt GitHub.</p>
+        </section>
+
+        <div class="summary">
+            <div class="card">
+                <h2>Informations personnelles</h2>
+                <div class="meta">
+                    <div class="meta-item"><span><strong>Nom</strong></span><span>Samba Sow</span></div>
+                    <div class="meta-item"><span><strong>Projet</strong></span><span>AfriConnect Summit 2026</span></div>
+                    <div class="meta-item"><span><strong>Déploiement</strong></span><span>GitHub Pages</span></div>
+                    <div class="meta-item"><span><strong>Page créée</strong></span><span>resume.html</span></div>
+                </div>
+                <h2>Fonctionnalités implémentées</h2>
+                <ul class="features">
+                    <li>Navigation cohérente entre les pages `index`, `programme`, `intervenants`, `contact`, `page6` et `resume`.</li>
+                    <li>Dark mode accessible avec stockage local et `aria-pressed`.</li>
+                    <li>Formulaire de contact validé côté client avec retours visuels.</li>
+                    <li>Filtrage dynamique des intervenants sans rechargement.</li>
+                    <li>Retour en haut après 300px et année dynamique dans le footer.</li>
+                    <li>Page de ressources avec consignes GitHub et liens autorisés.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Dépôt GitHub</h2>
+                <p>Voici le dépôt GitHub recommandé pour le rendu du projet :</p>
+                <p><a class="repo-link" href="https://github.com/SambaSow/SOW-Samba-AfriConnectSummit" target="_blank" rel="noopener">https://github.com/SambaSow/SOW-Samba-AfriConnectSummit</a></p>
+                <p>Nom du dépôt : <strong>SOW-Samba-AfriConnectSummit</strong></p>
+                <p>Conseil : active GitHub Pages dès le premier commit et réalise au moins 8 commits clairs en français.</p>
+                <div class="notice" style="margin-top:1.25rem;background:rgba(96,165,255,.1);border-color:rgba(96,165,255,.2);">
+                    Ce résumé est conçu pour rappeler les éléments essentiels du projet et faciliter la soutenance.
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div>AfriConnect Summit 2026</div>
+            <div>© <span id="year"></span> — Samba Sow</div>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('africonnect-theme');
+        if(savedTheme === 'dark') root.setAttribute('data-theme','dark');
+        themeToggle.addEventListener('click', () => {
+            const dark = root.getAttribute('data-theme') === 'dark';
+            if(dark){
+                root.removeAttribute('data-theme');
+                localStorage.removeItem('africonnect-theme');
+            } else {
+                root.setAttribute('data-theme','dark');
+                localStorage.setItem('africonnect-theme','dark');
+            }
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

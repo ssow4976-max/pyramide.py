@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnect Summit 2026 - Programme</title>
+    <meta name="description" content="Programme complet du AfriConnect Summit 2026 — sessions, ateliers et parcours thématiques." />
+    <style>
+        :root{
+            --bg:#f8fbff; --fg:#101827; --muted:#5c6a82; --accent:#0066cc; --accent-600:#004a9d;
+            --surface:#ffffff; --border:#d7e2f1; --radius:18px; --max-width:1180px;
+        }
+        [data-theme="dark"]{
+            --bg:#071018; --fg:#e6eef6; --muted:#94a3b8; --accent:#60a5ff; --accent-600:#3b82f6;
+            --surface:#0f172a; --border:rgba(148,163,184,.25);
+        }
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            background:var(--bg);color:var(--fg);min-height:100vh;padding:0 1rem;transition:background .25s,color .25s;}
+        .page{max-width:var(--max-width);margin:0 auto;padding:1.5rem 0}
+        header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0;position:sticky;top:0;background:var(--bg);z-index:10;border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}
+        .brand{display:flex;align-items:center;gap:.75rem}
+        .logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-600));display:grid;place-items:center;color:white;font-weight:800}
+        nav{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+        a{color:var(--fg);text-decoration:none}
+        .nav-link{padding:.55rem .85rem;border-radius:12px;font-weight:600;color:var(--muted)}
+        .nav-link:hover,.nav-link[aria-current="page"]{background:rgba(0,102,204,.12);color:var(--accent)}
+        .theme-toggle{border:1px solid var(--border);background:transparent;border-radius:12px;padding:.55rem;cursor:pointer;color:var(--fg)}
+        .hero{padding:2.5rem 0 1.25rem;display:grid;gap:1rem}
+        .breadcrumbs{font-size:.9rem;color:var(--muted);margin-bottom:.75rem}
+        h1{font-size:clamp(2rem,4vw,3rem);margin:.2rem 0}
+        .hero p{max-width:52rem;color:var(--muted);line-height:1.7}
+        .overview{display:grid;grid-template-columns:1.2fr .8fr;gap:1.5rem;margin-top:2rem}
+        .summary{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:1.5rem;box-shadow:0 24px 60px rgba(15,23,42,.06)}
+        .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+        .stat{background:rgba(0,102,204,.06);border:1px solid var(--border);border-radius:18px;padding:1rem}
+        .stat strong{display:block;font-size:1.35rem;color:var(--accent)}
+        .program-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+        .track-card{background:var(--surface);border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(15,23,42,.06);transition:transform .25s}
+        .track-card:hover{transform:translateY(-4px)}
+        .track-card h2{margin:0;color:var(--accent);padding:1.25rem 1.5rem 0}
+        .track-card p{padding:0 1.5rem 1.25rem;color:var(--muted);line-height:1.7}
+        .session-list{list-style:none;margin:0;padding:0}
+        .session-item{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:1rem 1.5rem;border-top:1px solid var(--border)}
+        .session-item:first-child{border-top:0}
+        .session-time{font-size:.85rem;font-weight:700;color:var(--accent);white-space:nowrap}
+        .session-meta{display:flex;flex-direction:column;gap:.35rem}
+        .session-title{margin:0;font-weight:700}
+        .session-speaker{margin:0;color:var(--muted);font-size:.95rem}
+        .highlight{display:inline-flex;padding:.35rem .75rem;border-radius:999px;background:rgba(0,102,204,.1);color:var(--accent);font-size:.85rem;font-weight:700}
+        .timeline{margin-top:2rem}
+        .timeline article{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:1.25rem 0;border-top:1px solid var(--border)}
+        .timeline article:first-child{border-top:0}
+        .timeline-time{font-weight:700;color:var(--accent);min-width:85px}
+        .timeline-body{display:flex;flex-direction:column;gap:.35rem}
+        .scroll-top{position:fixed;right:1.1rem;bottom:1.1rem;width:48px;height:48px;border:none;border-radius:50%;background:var(--accent);color:white;font-size:1.25rem;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 18px 30px rgba(0,0,0,.18);z-index:20}
+        footer{margin-top:2rem;padding:1.5rem 0;color:var(--muted);font-size:.92rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+        .footer-brand{font-weight:700}
+        @media(max-width:960px){.overview{grid-template-columns:1fr}.program-grid{grid-template-columns:1fr}}
+        @media(max-width:720px){header{flex-direction:column;align-items:flex-start}.timeline article{grid-template-columns:1fr}.session-item{grid-template-columns:1fr}}    
+    </style>
+</head>
+<body>
+    <div class="page" role="document">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden="true">AC</div>
+                <div>
+                    <div style="font-weight:800">AfriConnect Summit</div>
+                    <div style="font-size:.85rem;color:var(--muted)">Programme</div>
+                </div>
+            </div>
+            <nav aria-label="Navigation principale">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="programme.html" aria-current="page">Programme</a>
+                <a class="nav-link" href="intervenants.html">Intervenants</a>
+                <a class="nav-link" href="page6.html">Ressources</a>
+                <a class="nav-link" href="resume.html">Résumé</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Basculer thème">🌓</button>
+        </header>
+
+        <section class="hero">
+            <div class="breadcrumbs">Accueil › Programme</div>
+            <h1>Programme complet du AfriConnect Summit 2026</h1>
+            <p>Découvrez les sessions, ateliers et parcours thématiques imaginés pour trois jours de conférences, de networking et d'innovation panafricaine.</p>
+        </section>
+
+        <div class="overview">
+            <div class="summary">
+                <h2 style="margin-top:0;">Agenda phare</h2>
+                <p>Chaque journée contient un déroulé clair : keynote d'ouverture, ateliers pratiques, tables rondes, sessions de networking et moments dédiés aux startups.</p>
+                <div class="stats">
+                    <div class="stat"><strong>3</strong> journées</div>
+                    <div class="stat"><strong>18</strong> sessions</div>
+                    <div class="stat"><strong>5</strong> parcours thématiques</div>
+                    <div class="stat"><strong>20</strong> intervenants</div>
+                </div>
+            </div>
+            <div class="summary">
+                <h2 style="margin-top:0;">Thématiques clés</h2>
+                <p>IA & Tech, Business, Design, Data et Innovation sociale. Chaque parcours est pensé pour aider les participant·e·s à passer de l'idée à l'impact réel.</p>
+                <div class="stat" style="margin-top:1rem;background:rgba(96,165,255,.1);border-color:rgba(96,165,255,.2);">
+                    <strong>Focus</strong>
+                    <p style="margin:.5rem 0 0;color:var(--muted);">Parcours adaptés aux besoins d'un écosystème africain moderne.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="program-grid">
+            <article class="track-card">
+                <h2>Jour 1<br><span style="font-size:.95rem;color:var(--muted);">Lancement & transformation</span></h2>
+                <p>Ouverture inspirante, sessions sur l'avenir de l'IA africaine et une keynote dédiée aux opportunités d'investissement.</p>
+                <ul class="session-list">
+                    <li class="session-item">
+                        <div class="session-time">09h00</div>
+                        <div class="session-meta"><p class="session-title">Keynote d'ouverture</p><p class="session-speaker">Aïcha N'Diaye — Vision IA panafricaine</p></div>
+                    </li>
+                    <li class="session-item">
+                        <div class="session-time">10h30</div>
+                        <div class="session-meta"><p class="session-title">Table ronde</p><p class="session-speaker">Investissement et croissance des startups</p></div>
+                    </li>
+                    <li class="session-item">
+                        <div class="session-time">14h00</div>
+                        <div class="session-meta"><p class="session-title">Atelier</p><p class="session-speaker">Concevoir des produits inclusifs</p></div>
+                    </li>
+                </ul>
+            </article>
+            <article class="track-card">
+                <h2>Jour 2<br><span style="font-size:.95rem;color:var(--muted);">Design & expérience</span></h2>
+                <p>Journée dédiée à l'expérience utilisateur, au design d'impact et à la construction de services adaptés aux besoins africains.</p>
+                <ul class="session-list">
+                    <li class="session-item">
+                        <div class="session-time">09h00</div>
+                        <div class="session-meta"><p class="session-title">Session pratique</p><p class="session-speaker">Fatoumata Kone — Design d'écosystèmes résilients</p></div>
+                    </li>
+                    <li class="session-item">
+                        <div class="session-time">11h00</div>
+                        <div class="session-meta"><p class="session-title">Panel</p><p class="session-speaker">Stratégies produit et adoption</p></div>
+                    </li>
+                    <li class="session-item">
+                        <div class="session-time">15h00</div>
+                        <div class="session-meta"><p class="session-title">Atelier collaboratif</p><p class="session-speaker">Prototyper avec contraintes locales</p></div>
+                    </li>
+                </ul>
+            </article>
+            <article class="track-card">
+                <h2>Jour 3<br><span style="font-size:.95rem;color:var(--muted);">Data & impact</span></h2>
+                <p>Concluez avec des sessions sur la donnée, l'analyse décisionnelle et la façon de transformer l'innovation en retombées concrètes.</p>
+                <ul class="session-list">
+                    <li class="session-item">
+                        <div class="session-time">09h00</div>
+                        <div class="session-meta"><p class="session-title">Conférence</p><p class="session-speaker">Kwame Boateng — Gouvernance des données</p></div>
+                    </li>
+                    <li class="session-item">
+                        <div class="session-time">11h30</div>
+                        <div class="session-meta"><p class="session-title">Startup pitch</p><p class="session-speaker">6 projets sélectionnés</p></div>
+                    </li>
+                    <li class="session-item">
+                        <div class="session-time">14h30</div>
+                        <div class="session-meta"><p class="session-title">Clôture</p><p class="session-speaker">Networking & actions pratiques</p></div>
+                    </li>
+                </ul>
+            </article>
+            <article class="track-card">
+                <h2>Parcours libre<br><span style="font-size:.95rem;color:var(--muted);">Sessions à la carte</span></h2>
+                <p>Choisissez parmi des formats courts et des discussions interactives pour optimiser votre présence selon vos objectifs.</p>
+                <ul class="session-list">
+                    <li class="session-item">
+                        <div class="session-time">12h00</div>
+                        <div class="session-meta"><p class="session-title">Lunch Labs</p><p class="session-speaker">Rencontres entre pairs</p></div>
+                    </li>
+                    <li class="session-item">
+                        <div class="session-time">16h00</div>
+                        <div class="session-meta"><p class="session-title">Open stage</p><p class="session-speaker">Interventions rapides</p></div>
+                    </li>
+                    <li class="session-item">
+                        <div class="session-time">17h30</div>
+                        <div class="session-meta"><p class="session-title">Cocktail</p><p class="session-speaker">Networking et idées</p></div>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="timeline" aria-labelledby="timeline-title">
+            <h2 id="timeline-title" style="margin-bottom:1rem;">Points forts</h2>
+            <article>
+                <div class="timeline-time">09h00</div>
+                <div class="timeline-body"><p class="session-title">Ouverture officielle</p><p class="session-speaker">Mot d'accueil par l'équipe AfriConnect</p></div>
+            </article>
+            <article>
+                <div class="timeline-time">13h00</div>
+                <div class="timeline-body"><p class="session-title">Déjeuner networking</p><p class="session-speaker">Rencontres thématiques et micro-conférences</p></div>
+            </article>
+            <article>
+                <div class="timeline-time">18h00</div>
+                <div class="timeline-body"><p class="session-title">Clôture conviviale</p><p class="session-speaker">Synthèse et perspectives pour 2027</p></div>
+            </article>
+        </section>
+
+        <button class="scroll-top" id="scrollTop" aria-label="Remonter en haut">↑</button>
+
+        <footer>
+            <div class="footer-brand">AfriConnect Summit 2026</div>
+            <div id="footerYear">© <span id="year"></span> — Tous droits réservés</div>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('africonnect-theme');
+        if(savedTheme === 'dark') root.setAttribute('data-theme','dark');
+        themeToggle.addEventListener('click', () => {
+            const dark = root.getAttribute('data-theme') === 'dark';
+            if(dark){
+                root.removeAttribute('data-theme');
+                localStorage.removeItem('africonnect-theme');
+            } else {
+                root.setAttribute('data-theme','dark');
+                localStorage.setItem('africonnect-theme','dark');
+            }
+        });
+
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 300){
+                scrollTop.style.display = 'flex';
+            } else {
+                scrollTop.style.display = 'none';
+            }
+        });
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({top:0,behavior:'smooth'});
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnect Summit 2026 - Intervenants</title>
+    <meta name="description" content="Intervenants vedettes du AfriConnect Summit 2026 — filtre dynamique, profils et programme." />
+    <style>
+        :root{--bg:#fbfbfb;--fg:#101827;--muted:#667085;--accent:#0066cc;--accent-600:#014f9f;--surface:#ffffff;--border:#d9e2ec;--radius:18px;}
+        [data-theme="dark"]{--bg:#071018;--fg:#e6eef6;--muted:#94a3b8;--accent:#60a5ff;--accent-600:#3b82f6;--surface:#0f172a;--border:rgba(148,163,184,.25);}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;padding:0 1rem;}
+        .page{max-width:1200px;margin:0 auto;padding:1.5rem 0}
+        header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 0;position:sticky;top:0;background:var(--bg);backdrop-filter:blur(12px);z-index:10;border-bottom:1px solid var(--border)}
+        .brand{display:flex;align-items:center;gap:.75rem}
+        .logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-600));display:grid;place-items:center;color:white;font-weight:800}
+        nav{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+        a{color:var(--fg);text-decoration:none}
+        .nav-link{padding:.55rem .85rem;border-radius:12px;font-weight:600;color:var(--muted);}
+        .nav-link:hover, .nav-link[aria-current="page"]{background:rgba(0,102,204,.1);color:var(--accent)}
+        .theme-toggle{border:1px solid var(--border);background:transparent;border-radius:12px;padding:.55rem;cursor:pointer;color:var(--fg)}
+        .hero{padding:2.5rem 0 1.5rem;display:grid;gap:1rem}
+        .breadcrumbs{font-size:.9rem;color:var(--muted);margin-bottom:.75rem}
+        h1{font-size:clamp(2rem,4vw,3.2rem);margin:.25rem 0}
+        .hero p{max-width:52rem;color:var(--muted);line-height:1.7}
+        .filters{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 1.75rem}
+        .filter-btn{padding:.75rem 1rem;border:1px solid var(--border);border-radius:999px;background:var(--surface);cursor:pointer;transition:transform .2s,background .2s;}
+        .filter-btn.active, .filter-btn:hover{background:var(--accent);color:white;border-color:transparent;transform:translateY(-1px)}
+        .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+        .card{background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:0 18px 50px rgba(15,23,42,.06);transition:transform .25s,box-shadow .25s}
+        .card:hover{transform:translateY(-6px);box-shadow:0 26px 70px rgba(15,23,42,.12)}
+        .photo{aspect-ratio:1/1;background-size:cover;background-position:center}
+        .card-body{padding:1.25rem}
+        .tag{display:inline-flex;padding:.35rem .8rem;border-radius:999px;background:rgba(0,102,204,.08);color:var(--accent);font-size:.86rem;font-weight:700;margin-top:.75rem}
+        .name{font-size:1.05rem;font-weight:700;margin:0}
+        .title{color:var(--muted);margin:.45rem 0 0;line-height:1.5}
+        .location{color:var(--muted);font-size:.95rem;margin-top:.8rem}
+        .footer-note{margin-top:2rem;padding:1.5rem;border-radius:18px;background:rgba(0,102,204,.06);color:var(--fg);border:1px solid var(--border)}
+        .hide{display:none}
+        @media(max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+        @media(max-width:680px){header{flex-direction:column;align-items:flex-start;} .grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <div class="page" role="document">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden="true">AC</div>
+                <div>
+                    <div style="font-weight:800">AfriConnect Summit</div>
+                    <div style="font-size:.85rem;color:var(--muted)">Intervenants</div>
+                </div>
+            </div>
+            <nav aria-label="Navigation principale">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="programme.html">Programme</a>
+                <a class="nav-link" href="intervenants.html" aria-current="page">Intervenants</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Basculer thème">🌓</button>
+        </header>
+
+        <section class="hero">
+            <div class="breadcrumbs">Accueil › Intervenants</div>
+            <h1>Intervenants vedettes du AfriConnect Summit 2026</h1>
+            <p>Découvrez nos experts fictifs, triés par thématique. Filtrez les profils sans rechargement de page et explorez les contributions de chaque intervenant.</p>
+        </section>
+
+        <section>
+            <div class="filters" role="toolbar" aria-label="Filtres par thème">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="ia-tech">IA & Tech</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="data">Data</button>
+            </div>
+            <div class="grid" id="speakerGrid">
+                <article class="card" data-category="ia-tech">
+                    <div class="photo" style="background-image:url('images/images.jpg');"></div>images.jpg
+                    <div class="card-body">
+                        <p class="name">Aïcha N'Diaye</p>
+                        <p class="title">Lead IA — Nairobi Labs</p>
+                        <p class="location">Sénégal</p>
+                        <span class="tag">IA & Tech</span>
+                    </div>
+                </article>
+                <article class="card" data-category="business">
+                    <div class="photo" style="background-image:url('images/images.jpg.jpg');"></div>images.jpg
+                    <div class="card-body">
+                        <p class="name">Mamadou Dembele</p>
+                        <p class="title">CEO — Bridge Ventures</p>
+                        <p class="location">Sénégal</p>
+                        <span class="tag">Business</span>
+                    </div>
+                </article>
+                <article class="card" data-category="design">
+                    <div class="photo" style="background-image:url('images/fatou.jpg');"></div>
+                    <div class="card-body">
+                        <p class="name">Fatoumata Kone</p>
+                        <p class="title">Directrice Design — Studio Ubuntu</p>
+                        <p class="location">mali</p>
+                        <span class="tag">Design</span>
+                    </div>
+                </article>
+                <article class="card" data-category="data">
+                    <div class="photo" style="background-image:url('images/kwame.jpg');"></div>
+                    <div class="card-body">
+                        <p class="name">dembo mbath</p>
+                        <p class="title">Chief Data Officer — Atlas Insights</p>
+                        <p class="location">Sénégal</p>
+                        <span class="tag">Data</span>
+                    </div>
+                </article>
+                <article class="card" data-category="ia-tech">
+                    <div class="photo" style="background-image:url('images/sofia.jpg');"></div>
+                    <div class="card-body">
+                        <p class="name">Sofia sow</p>
+                        <p class="title">Architecte Cloud — PanGrowth</p>
+                        <p class="location">Afrique du Sud</p>
+                        <span class="tag">IA & Tech</span>
+                    </div>
+                </article>
+                <article class="card" data-category="business">
+                    <div class="photo" style="background-image:url('images/jasmine.jpg');"></div>
+                    <div class="card-body">
+                        <p class="name">Yasmina ketekouni</p>
+                        <p class="title">Fondatrice — Impact Hub Casablanca</p>
+                        <p class="location">Centre afrique</p>
+                        <span class="tag">Business</span>
+                    </div>
+                </article>
+                <article class="card" data-category="design">
+                    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="card-body">
+                        <p class="name">Léonard Ngoma</p>
+                        <p class="title">UX Strategist — Creative Lagos</p>
+                        <p class="location">Nigeria</p>
+                        <span class="tag">Design</span>
+                    </div>
+                </article>
+                <article class="card" data-category="data">
+                    <div class="photo" style="background-image:url('images/imani.jpg');"></div>images/imani.jpg
+                    <div class="card-body">
+                        <p class="name">binta ndiaye</p>
+                        <p class="title">Analyste Senior — DataPulse</p>
+                        <p class="location">Sénégal</p>
+                        <span class="tag">Data</span>
+                    </div>
+                </article>
+                <article class="card" data-category="ia-tech">
+                    <div class="photo" style="background-image:url('images/omar.jpg');"></div>
+                    <div class="card-body">
+                        <p class="name">Oumar Traoré</p>
+                        <p class="title">CTO — SmartBuild AI</p>
+                        <p class="location">Mali</p>
+                        <span class="tag">IA & Tech</span>
+                    </div>
+                </article>
+                <article class="card" data-category="business">
+                    <div class="photo" style="background-image:url('images/nadia.jpg');"></div>images/nadia.jpg
+                    <div class="card-body">
+                        <p class="name">Aissatou traore</p>
+                        <p class="title">Investor Relations — FutureFonds</p>
+                        <p class="location">Sénégal</p>
+                        <span class="tag">Business</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="footer-note">
+            <p><strong>Astuce :</strong> utilisez les filtres pour explorer des intervenants par domaine. Cette page est conçue pour être entièrement responsive et accessible. </p>
+        </section>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.card');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+                cards.forEach(card => {
+                    if(filter === 'all' || card.dataset.category === filter){
+                        card.classList.remove('hide');
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+            });
+        });
+
+        const themeToggle = document.getElementById('themeToggle');
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('africonnect-theme');
+        if(savedTheme === 'dark') root.setAttribute('data-theme','dark');
+        themeToggle.addEventListener('click', () => {
+            const dark = root.getAttribute('data-theme') === 'dark';
+            if(dark){
+                root.removeAttribute('data-theme');
+                localStorage.removeItem('africonnect-theme');
+            } else {
+                root.setAttribute('data-theme','dark');
+                localStorage.setItem('africonnect-theme','dark');
+            }
+        });
+    </script>
+</body>
+</html>

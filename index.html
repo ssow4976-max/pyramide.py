@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AfriConnect Summit 2026 — Conférence panafricaine pour développeurs, entrepreneurs et investisseurs.">
+    <title>AfriConnect Summit 2026 - Accueil</title>
+    <style>
+        :root{
+            --bg:#fbfbfb; --fg:#0b0b0b; --muted:#6b6b6b;
+            --accent:#0066cc; --accent-600:#0055a8; --radius:12px;
+            --max-width:1100px;
+        }
+        [data-theme="dark"]{
+            --bg:#071018; --fg:#e6eef6; --muted:#9fb0c3; --accent:#60a5ff; --accent-600:#3b82f6;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%;}
+        body{
+            margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background:var(--bg);color:var(--fg);line-height:1.45;-webkit-font-smoothing:antialiased;
+            transition:background .25s, color .25s;
+            padding:0 1rem;
+        }
+        .container{max-width:var(--max-width);margin:0 auto;padding:2rem 0}
+        header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+        .brand{display:flex;gap:.75rem;align-items:center}
+        .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-600));display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700}
+        nav{display:flex;gap:1rem;align-items:center}
+        a{color:var(--fg);text-decoration:none}
+        .nav-link{padding:.4rem .55rem;border-radius:8px;font-weight:600;color:var(--muted)}
+        .nav-link:hover{background:rgba(0,0,0,.04)}
+        .hero{display:grid;grid-template-columns:1fr;gap:1.25rem;align-items:center;padding:3rem 0}
+        .eyebrow{color:var(--accent);font-weight:700}
+        h1{font-size:clamp(1.6rem,3.6vw,2.6rem);margin:.2rem 0}
+        p.lead{color:var(--muted);max-width:60ch}
+        .cta{display:flex;gap:.75rem;margin-top:1rem}
+        .btn{background:var(--accent);color:white;padding:.65rem 1rem;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+        .btn.ghost{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+        .info-strip{background:rgba(0,0,0,.03);padding:.9rem;border-radius:10px;color:var(--fg);display:flex;flex-direction:column;gap:.35rem}
+        section.card{background:transparent;padding:1.25rem 0;border-top:1px solid rgba(0,0,0,.06)}
+        .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+        footer{padding:2rem 0;color:var(--muted);font-size:.9rem}
+        .controls{display:flex;gap:.5rem;align-items:center}
+        .theme-toggle{background:transparent;border:1px solid rgba(0,0,0,.08);padding:.4rem;border-radius:8px}
+
+        /* Responsive */
+        @media (max-width:900px){
+            .grid{grid-template-columns:1fr}
+            nav{display:none}
+        }
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion:reduce){
+            *{transition:none!important}
+            .fade-in{animation:none}
+        }
+        /* Simple entrance */
+        .fade-in{animation:fade .9s ease both}
+        @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main" style="position:absolute;left:-9999px;top:auto;">Aller au contenu</a>
+    <div class="container" role="document">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden="true">AC</div>
+                <div>
+                    <div style="font-weight:800">AfriConnect</div>
+                    <div style="font-size:.85rem;color:var(--muted)">Summit 2026</div>
+                </div>
+            </div>
+            <nav aria-label="Navigation principale">
+                <a class="nav-link" href="#accueil">Accueil</a>
+                <a class="nav-link" href="#programme">Programme</a>
+                <a class="nav-link" href="#speakers">Intervenants</a>
+                <a class="nav-link" href="page6.html">Ressources</a>
+                <a class="nav-link" href="resume.html">Résumé</a>
+                <a class="nav-link" href="#inscription">Inscription</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </nav>
+            <div class="controls">
+                <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Basculer thème">🌓</button>
+            </div>
+        </header>
+
+        <main id="main">
+            <section class="hero fade-in" aria-labelledby="hero-title">
+                <div>
+                    <div class="eyebrow">Conférence panafricaine</div>
+                    <h1 id="hero-title">AfriConnect Summit 2026 — Connecter l'innovation en Afrique francophone</h1>
+                    <p class="lead">Rejoignez développeurs, entrepreneurs et investisseurs pour trois jours de conférences, ateliers et networking. Site vitrine moderne, accessible et entièrement fonctionnel.</p>
+                    <div class="cta">
+                        <a class="btn" href="#inscription">S'inscrire</a>
+                        <a class="btn ghost" href="#programme">Voir le programme</a>
+                    </div>
+                </div>
+                <!-- Section 'Informations importantes' supprimée sur demande -->
+            </section>
+
+            <section class="card" id="contexte" aria-labelledby="contexte-title">
+                <h2 id="contexte-title">Contexte</h2>
+                <div class="grid">
+                    <div>
+                        <p>L'Afrique francophone accueille chaque année des centaines d'événements tech. Vous êtes chargé·e de concevoir et développer le site vitrine complet d'une conférence fictive nommée « AfriConnect Summit ». Le site doit être moderne, fluide, responsive et entièrement fonctionnel.</p>
+                    </div>
+                    <div>
+                        <p>Attentes : typographie expressive, animations sobres, dark mode, navigation fluide et code accessible (alt, aria-label, sémantique). Respectez les bonnes pratiques et l'accessibilité.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="objectifs" aria-labelledby="objectifs-title">
+                <h2 id="objectifs-title">Objectifs pédagogiques</h2>
+                <ul>
+                    <li><strong>HTML5 :</strong> structure sémantique, titres logiques, attributs d'accessibilité (`alt`, `aria-*`).</li>
+                    <li><strong>CSS moderne :</strong> variables, responsive, modes clair/sombre.</li>
+                    <li><strong>JavaScript :</strong> interactions accessibles, respect de `prefers-reduced-motion`.</li>
+                </ul>
+            </section>
+
+            <section class="card" id="inspiration" aria-labelledby="inspiration-title">
+                <h2 id="inspiration-title">Sites d'inspiration</h2>
+                <p>Références recommandées — observez la typographie, les animations, la structure et le système de navigation.</p>
+                <div style="overflow-x:auto;margin-top:.75rem">
+                    <table style="width:100%;border-collapse:collapse;min-width:760px">
+                        <thead>
+                            <tr style="text-align:left;border-bottom:2px solid rgba(0,0,0,.08)">
+                                <th style="padding:.65rem 0">Site</th>
+                                <th style="padding:.65rem 0">Lien</th>
+                                <th style="padding:.65rem 0">Ce qu'on y apprend</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,.04)">
+                                <td style="padding:.6rem 0;font-weight:700">Web Summit</td>
+                                <td style="padding:.6rem 0"><a href="https://websummit.com" target="_blank" rel="noopener">websummit.com</a></td>
+                                <td style="padding:.6rem 0;color:var(--muted)">Hero immersif, compte à rebours, structure événementielle</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,.04)">
+                                <td style="padding:.6rem 0;font-weight:700">Awwwards Conference</td>
+                                <td style="padding:.6rem 0"><a href="https://conference.awwwards.com" target="_blank" rel="noopener">conference.awwwards.com</a></td>
+                                <td style="padding:.6rem 0;color:var(--muted)">Typographie expressive, animations sobres, grille asymétrique</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,.04)">
+                                <td style="padding:.6rem 0;font-weight:700">Config (Figma)</td>
+                                <td style="padding:.6rem 0"><a href="https://config.figma.com" target="_blank" rel="noopener">config.figma.com</a></td>
+                                <td style="padding:.6rem 0;color:var(--muted)">Design system cohérent, filtrage d'intervenants, dark mode</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,.04)">
+                                <td style="padding:.6rem 0;font-weight:700">Google I/O</td>
+                                <td style="padding:.6rem 0"><a href="https://io.google" target="_blank" rel="noopener">io.google</a></td>
+                                <td style="padding:.6rem 0;color:var(--muted)">Grille de sessions, onglets de navigation, responsive exemplaire</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,.04)">
+                                <td style="padding:.6rem 0;font-weight:700">Africa Tech Summit</td>
+                                <td style="padding:.6rem 0"><a href="https://africatechsummit.com" target="_blank" rel="noopener">africatechsummit.com</a></td>
+                                <td style="padding:.6rem 0;color:var(--muted)">Référence sectorielle, structure événement africain</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,.04)">
+                                <td style="padding:.6rem 0;font-weight:700">Awwwards - Events</td>
+                                <td style="padding:.6rem 0"><a href="https://www.awwwards.com/websites/events/" target="_blank" rel="noopener">awwwards.com/events</a></td>
+                                <td style="padding:.6rem 0;color:var(--muted)">Galerie des meilleurs sites événementiels primés</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,.04)">
+                                <td style="padding:.6rem 0;font-weight:700">Dribbble - Conference</td>
+                                <td style="padding:.6rem 0"><a href="https://dribbble.com/search/conference-website" target="_blank" rel="noopener">dribbble.com</a></td>
+                                <td style="padding:.6rem 0;color:var(--muted)">Maquettes UI/UX de pages événementielles</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,.04)">
+                                <td style="padding:.6rem 0;font-weight:700">Behance - Event Web</td>
+                                <td style="padding:.6rem 0"><a href="https://www.behance.net/search/projects?search=event+conference+website" target="_blank" rel="noopener">behance.net</a></td>
+                                <td style="padding:.6rem 0;color:var(--muted)">Projets complets avec processus de design</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,.04)">
+                                <td style="padding:.6rem 0;font-weight:700">Coolors</td>
+                                <td style="padding:.6rem 0"><a href="https://coolors.co" target="_blank" rel="noopener">coolors.co</a></td>
+                                <td style="padding:.6rem 0;color:var(--muted)">Générateur de palettes harmonieuses</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:.6rem 0;font-weight:700">Google Fonts</td>
+                                <td style="padding:.6rem 0"><a href="https://fonts.google.com" target="_blank" rel="noopener">fonts.google.com</a></td>
+                                <td style="padding:.6rem 0;color:var(--muted)">Choix typographique — explorer les paires de polices</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="card" id="inscription" aria-labelledby="inscription-title">
+                <h2 id="inscription-title">Inscription</h2>
+                <p>Inscrivez-vous pour recevoir les dernières nouvelles.</p>
+                <form aria-label="Formulaire d'inscription" onsubmit="return false;" style="display:flex;gap:.5rem;flex-wrap:wrap;">
+                    <label style="display:none" for="email">Email</label>
+                    <input id="email" type="email" placeholder="votre@email.com" required style="flex:1;min-width:200px;padding:.6rem;border-radius:8px;border:1px solid rgba(0,0,0,.08)">
+                    <button class="btn" type="submit">Recevoir</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+                <div>© AfriConnect Summit 2026 — Tous droits réservés</div>
+                <div style="color:var(--muted)">Conçu pour l'examen — site d'exercice pédagogique</div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        (function(){
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const root = document.documentElement;
+            if(prefersDark) root.setAttribute('data-theme','dark');
+
+            const btn = document.getElementById('themeToggle');
+            btn.addEventListener('click', ()=>{
+                const isDark = root.getAttribute('data-theme') === 'dark';
+                if(isDark){ root.removeAttribute('data-theme'); btn.setAttribute('aria-pressed','false'); }
+                else{ root.setAttribute('data-theme','dark'); btn.setAttribute('aria-pressed','true'); }
+            });
+
+            // Respect reduced motion for any scripted animation
+            if(reduced){
+                document.documentElement.classList.add('reduce-motion');
+            }
+        })();
+    </script>
+</body>
+</html>

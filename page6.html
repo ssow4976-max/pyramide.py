@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnect Summit 2026 - Ressources</title>
+    <meta name="description" content="Ressources recommandées et consignes GitHub pour le projet AfriConnect Summit 2026." />
+    <style>
+        :root{--bg:#f8fbff;--fg:#101827;--muted:#566580;--accent:#0066cc;--accent-600:#004a9d;--surface:#ffffff;--border:#d8e3f2;--radius:18px;}
+        [data-theme="dark"]{--bg:#071018;--fg:#e6eef6;--muted:#94a3b8;--accent:#60a5ff;--accent-600:#3b82f6;--surface:#0f172a;--border:rgba(148,163,184,.25);}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;padding:0 1rem;transition:background .25s,color .25s;}
+        .page{max-width:1180px;margin:0 auto;padding:1.5rem 0}
+        header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--border);backdrop-filter:blur(14px);z-index:10}
+        .brand{display:flex;align-items:center;gap:.75rem}
+        .logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-600));display:grid;place-items:center;color:white;font-weight:800}
+        nav{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+        a{color:var(--fg);text-decoration:none}
+        .nav-link{padding:.55rem .85rem;border-radius:12px;font-weight:600;color:var(--muted)}
+        .nav-link:hover,.nav-link[aria-current="page"]{background:rgba(0,102,204,.12);color:var(--accent)}
+        .theme-toggle{border:1px solid var(--border);background:transparent;border-radius:12px;padding:.55rem;cursor:pointer;color:var(--fg)}
+        .hero{padding:2.5rem 0 1.25rem;display:grid;gap:1rem}
+        .breadcrumbs{font-size:.9rem;color:var(--muted);margin-bottom:.75rem}
+        h1{font-size:clamp(2rem,4vw,3rem);margin:.2rem 0}
+        .hero p{max-width:52rem;color:var(--muted);line-height:1.7}
+        .cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+        .card{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:1.5rem;box-shadow:0 24px 60px rgba(15,23,42,.06)}
+        .card h2{margin-top:0;color:var(--accent)}
+        .card ul{margin:1rem 0 0;padding:0;list-style:none}
+        .card li{padding:.75rem 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;gap:1rem}
+        .card li:last-child{border-bottom:0}
+        .card a{color:var(--accent);text-decoration:none}
+        .card a:hover{text-decoration:underline}
+        .resource-list{margin-top:1rem}
+        .resource-item{margin-bottom:1rem}
+        .resource-title{font-weight:700;color:var(--fg)}
+        .resource-link{color:var(--accent)}
+        .notice{background:rgba(0,102,204,.08);border:1px solid var(--border);padding:1rem 1.25rem;border-radius:18px;color:var(--muted);margin-top:1.5rem}
+        footer{margin-top:2rem;padding:1.5rem 0;color:var(--muted);font-size:.92rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+        @media(max-width:920px){.cards{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <div class="page" role="document">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden="true">AC</div>
+                <div>
+                    <div style="font-weight:800">AfriConnect Summit</div>
+                    <div style="font-size:.85rem;color:var(--muted)">Ressources</div>
+                </div>
+            </div>
+            <nav aria-label="Navigation principale">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="programme.html">Programme</a>
+                <a class="nav-link" href="intervenants.html">Intervenants</a>
+                <a class="nav-link" href="page6.html" aria-current="page">Ressources</a>
+                <a class="nav-link" href="resume.html">Résumé</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Basculer thème">🌓</button>
+        </header>
+
+        <section class="hero">
+            <div class="breadcrumbs">Accueil › Ressources</div>
+            <h1>Page 6 — Ressources & GitHub</h1>
+            <p>Retrouvez les ressources autorisées pour votre projet ainsi que les bonnes pratiques Git et GitHub à respecter.</p>
+        </section>
+
+        <div class="cards">
+            <div class="card">
+                <h2>Git & GitHub</h2>
+                <p>Pour le rendu final, soumets ton projet sur GitHub avec au moins 8 commits répartis sur deux semaines. Le dépôt doit être public et le lien GitHub Pages fonctionnel.</p>
+                <ul>
+                    <li><span>Nom du dépôt</span><strong> NOM-Prenom-AfriConnectSummit</strong></li>
+                    <li><span>Commits</span><strong>Minimum 8 commits clairs et en français</strong></li>
+                    <li><span>Déploiement</span><strong>GitHub Pages activé</strong></li>
+                    <li><span>README</span><strong>Présente le projet, les technologies et le lien</strong></li>
+                </ul>
+                <div class="notice">Toute similarité de code entre étudiants peut entraîner un 0/20. Prépare-toi à expliquer chaque fonction JavaScript et chaque propriété CSS avancée.</div>
+            </div>
+
+            <div class="card">
+                <h2>Ressources autorisées</h2>
+                <div class="resource-list">
+                    <div class="resource-item"><p class="resource-title">MDN Web Docs</p><a class="resource-link" href="https://developer.mozilla.org/fr/" target="_blank" rel="noopener">developer.mozilla.org/fr/</a></div>
+                    <div class="resource-item"><p class="resource-title">W3Schools</p><a class="resource-link" href="https://www.w3schools.com/" target="_blank" rel="noopener">www.w3schools.com</a></div>
+                    <div class="resource-item"><p class="resource-title">CSS-Tricks</p><a class="resource-link" href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks.com</a></div>
+                    <div class="resource-item"><p class="resource-title">Git Documentation</p><a class="resource-link" href="https://git-scm.com/doc" target="_blank" rel="noopener">git-scm.com/doc</a></div>
+                    <div class="resource-item"><p class="resource-title">Google Fonts</p><a class="resource-link" href="https://fonts.google.com" target="_blank" rel="noopener">fonts.google.com</a></div>
+                    <div class="resource-item"><p class="resource-title">Bootstrap Icons</p><a class="resource-link" href="https://icons.getbootstrap.com/" target="_blank" rel="noopener">icons.getbootstrap.com</a></div>
+                    <div class="resource-item"><p class="resource-title">Unsplash</p><a class="resource-link" href="https://unsplash.com" target="_blank" rel="noopener">unsplash.com</a></div>
+                    <div class="resource-item"><p class="resource-title">Pexels</p><a class="resource-link" href="https://www.pexels.com/fr-fr/" target="_blank" rel="noopener">pexels.com/fr-fr/</a></div>
+                    <div class="resource-item"><p class="resource-title">Coolors</p><a class="resource-link" href="https://coolors.co/" target="_blank" rel="noopener">coolors.co</a></div>
+                    <div class="resource-item"><p class="resource-title">W3C Validator</p><a class="resource-link" href="https://validator.w3.org/" target="_blank" rel="noopener">validator.w3.org</a></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div>AfriConnect Summit 2026</div>
+            <div>© <span id="year"></span> — Tous droits réservés</div>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('africonnect-theme');
+        if(savedTheme === 'dark') root.setAttribute('data-theme','dark');
+        themeToggle.addEventListener('click', () => {
+            const dark = root.getAttribute('data-theme') === 'dark';
+            if(dark){
+                root.removeAttribute('data-theme');
+                localStorage.removeItem('africonnect-theme');
+            } else {
+                root.setAttribute('data-theme','dark');
+                localStorage.setItem('africonnect-theme','dark');
+            }
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
